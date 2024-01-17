@@ -6,8 +6,20 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:22:17 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/09 15:22:22 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/17 11:01:39 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+size_t	ft_strlen(const char *s)
+{
+	int i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i]!= '\0')
+		i++;
+		return (i);
+}
