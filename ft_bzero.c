@@ -6,8 +6,20 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:23:39 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/10 12:02:12 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/22 13:43:28 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+void ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}
+/*
+int	main(void)
+{
+	char x[10];
+	ft_bzero(x, 10);
+	printf("%s", x);
+}*/
