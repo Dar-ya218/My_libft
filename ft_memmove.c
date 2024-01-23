@@ -6,27 +6,25 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:24:41 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/22 16:30:01 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:37:04 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *dst_ptr;
-	const unsigned char *src_ptr;
+	unsigned char		*dst_ptr;
+	const unsigned char	*src_ptr;
 
 	dst_ptr = (unsigned char *)dst;
-	src_ptr = (unsigned char *)src;
-
+	src_ptr = (const unsigned char *)src;
 	if (dst == src)
 		return (dst);
-
 	if (dst < src)
 	{
 		while (len--)
-			*dst-ptr++ = *src_ptr++;
+			*dst_ptr++ = *src_ptr++;
 	}
 	else
 	{
@@ -35,7 +33,7 @@ void	ft_memmove(void *dst, const void *src, size_t len)
 		while (len--)
 			*(--dst_ptr) = *(--src_ptr);
 	}
-return (dst);
+	return (dst);
 }
 /*
 int	main(void)
@@ -43,8 +41,8 @@ int	main(void)
 	char	dst[50];
 	char	*src;
 
-	src = "David drinks beer";
-	ft_memmove(dst, src, 17);
+	src = "Hello world!";
+	ft_memmove(dst, src, 12);
 	printf("After ft_memmove: %s\n", dst);
 	return (0);
 }*/
