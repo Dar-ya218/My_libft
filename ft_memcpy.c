@@ -11,20 +11,34 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 char	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
 	char			*dest;
-	char			*src;
+	char			*source;
 
 	i = 0;
 	dest = (char *)dest;
-	src = (char *)src;
+	sourse = (char *)src;
 	while (i < n)
 	{
-		dest[i] = src[i];
+		dest[i] = sourse[i];
 		i++;
 	}
 	return (dest);
 }
+/*
+int main() {
+    char src[50] = "Hello World!";
+    char dest[50];
+
+    ft_memcpy(dest, src, 50);
+
+    printf("Source: %s\n", src);
+    printf("Destination: %s\n", dest);
+
+    return 0;
+}
+*/
