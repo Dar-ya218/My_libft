@@ -10,4 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+//#include <stdio.h>
 
+int	ft_toupper(int c)
+{
+	if ('a' <= c && c <= 'z')
+		return (c - 32);
+	return (c);
+}
+/*
+int main() {
+    char c = 'a';
+
+    int upper_c = ft_toupper(c);
+
+    printf("Original character: %c\n", c);
+    printf("Uppercase character: %c\n", upper_c);
+
+    return 0;
+}/*
