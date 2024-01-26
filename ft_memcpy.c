@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:24:09 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/26 13:48:52 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/26 14:58:08 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 //#include <stdio.h>
 //#include <string.h>
 
-char	*ft_memcpy(void *dest, const void *src, size_t n)
+/*
+	This function copies n positions of memory.
+*/
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t			i;
 	char			*dstination;
