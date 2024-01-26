@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 15:19:25 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/10 12:49:22 by dabochko         ###   ########.fr       */
+/*   Created: 2024/01/26 11:55:05 by dabochko          #+#    #+#             */
+/*   Updated: 2024/01/26 11:55:40 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_isalpha(int c)
