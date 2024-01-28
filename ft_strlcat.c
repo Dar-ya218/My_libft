@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:26:51 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/23 13:31:54 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/26 15:18:58 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	dst_l = ft_strlen(dst);
 	src_l = ft_strlen(src);
-	i = dst_1;
+	i = dst_l;
 	j = 0;
 	if (dstsize <= dst_l)
 		return (src_l + dstsize);
@@ -32,15 +32,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 		j++;
 	}
-     if (i < dstsize)
-	    dst[i] = '\0';
+	if (i < dstsize)
+		dst[i] = '\0';
 	return (dst_l + src_l);
 }
 /*int main() {
-    char src[50] = " World!";
-    char dest[50] = "Hello,";
+    char src[10] = " World!";
+    char dest[51] = "Hello,";
 
-    size_t len = ft_strlcat(dest, src, 50);
+    size_t len = ft_strlcat(dest, src, 10);
 
     printf("Length: %zu\n", len);
     printf("Source: %s\n", src);

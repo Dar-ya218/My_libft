@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:14:43 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/25 12:15:01 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/26 12:01:35 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,4 @@ int main() {
     printf("Uppercase character: %c\n", upper_c);
 
     return 0;
-}/*
+}*/
