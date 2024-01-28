@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -39,3 +40,19 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (result);
 }
+
+/*int main() {
+    const char *s = "Hello, World!";
+    int c = 'o';
+    size_t n = 10;
+
+    char *result = ft_memchr(s, c, n);
+
+    if (result) {
+        printf("Found '%c' at position: %ld\n", c, result - s);
+    } else {
+        printf("Character '%c' not found within the first %ld characters.\n", c, n);
+    }
+
+    return 0;
+}*/
