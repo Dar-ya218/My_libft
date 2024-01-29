@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:22:52 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/29 12:37:41 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/29 12:55:24 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	{
 		return ((char *)haystack);
 	}
-
 	len = elements;
 	while (n >= len)
 	{
