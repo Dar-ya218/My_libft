@@ -30,12 +30,14 @@ char	*ft_strdup(const char *s)
 }
 
 /*int main() {
-	const char *s = "Hello, World!";
+    const char *s = "Hello, World!";
 
-	char *result = ft_strdup(s);
+    char *result = ft_strdup(s);
 
-	printf("Original string: \"%s\"\n", s);
-	printf("Duplicated string: \"%s\"\n", result);
+    printf("Original string: \"%s\"\n", s);
+    printf("Duplicated string: \"%s\"\n", result);
 
-	return 0;
+    free(result);
+
+    return 0;
 }*/

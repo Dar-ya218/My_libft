@@ -31,16 +31,21 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 
 /*int main() {
-	size_t nmemb = 5;
-	size_t size = 10;
+    size_t nmemb = 5;
+    size_t size = sizeof(char);
 
-	char *result = ft_calloc(nmemb, size);
+    char *result = (char *)ft_calloc(nmemb, size);
 
-	if (result) {
-		printf("Allocated %ld bytes.\n", nmemb * size);
-	} else {
-		printf("Failed to allocate %ld bytes.\n", nmemb * size);
-	}
+    if (result) {
+        printf("Allocated %ld bytes. Contents:\n", nmemb * size);
+        for (size_t i = 0; i < nmemb * size; i++) {
+            printf("%d ", result[i]);
+        }
+        printf("\n");
+    } else {
+        printf("Failed to allocate %ld bytes.\n", nmemb * size);
+    }
 
-	return 0;
+    free(result);
+    return 0;
 }*/
