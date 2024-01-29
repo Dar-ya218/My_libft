@@ -6,35 +6,46 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:22:52 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/29 12:55:24 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/29 16:31:31 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stddef.h>
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
+char	*ft_strnsr (const char *haystack, const char *needle, size_t len)
 {
-	size_t	len;
-	size_t	elements;
+	size_t	i;
+	size_t j;
 
-	elements = ft_strlen(needle);
-	if (elements == 0)
-	{
+    i = 0;
+    j = 0;
+	if (*needle == '\0')
 		return ((char *)haystack);
-	}
-	len = elements;
-	while (n >= len)
-	{
-		if (*haystack == *needle)
-		{
-			if (ft_strncmp(haystack, needle, len) == 0)
-			{
-				return ((char *)haystack);
-			}
-		}
-		haystack++;
-		n--;
-	}
-	return (NULL);
+	while (haystack[i] != '\0' && i < len)
+    {
+		if (haystack[i] == needle[0])
+        {
+			while (needle[j] != '\0'
+                && haystack[i + j] == needle[j] && i + j < len)
+            {
+				if (needle[j + 1] == '\0')
+					return ((char *)&haystack[i]);
+                j++;
+            }
+        }
+        i++;
+    }
+		return (NULL);
 }
+/*int main()
+{
+    char haystack[] = "Hello World ";
+    char needle[] = "World ";
+
+    printf("%s\n", ft_strnstr(haystack, needle, 12));
+    printf("%s\n", strnstr(haystack, needle, 12));
+
+    return 0;
+}*/

@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:22:18 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/26 15:14:17 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/29 14:47:18 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*uc_s1;
 	unsigned char	*uc_s2;
-	size_t			idx;
+	size_t			i;
 
 	uc_s1 = (unsigned char *)s1;
 	uc_s2 = (unsigned char *)s2;

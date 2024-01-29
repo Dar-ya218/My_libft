@@ -6,7 +6,7 @@
 #    By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 11:37:30 by dabochko          #+#    #+#              #
-#    Updated: 2024/01/23 12:20:24 by dabochko         ###   ########.fr        #
+#    Updated: 2024/01/29 14:58:28 by dabochko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = libft.a
 
 SOURCES = ft_isalnum.c ft_isascii.c ft_isprint.c ft_memmove.c ft_strlcat.c \
 ft_strlen.c ft_bzero.c ft_isalpha.c ft_isdigit.c ft_memcpy.c ft_memset.c \
-ft_strlcpy.c
+ft_strlcpy.c ft_atoi.c ft_strnstr.c ft_memcmp.c ft_memchr.c ft_strncmp.c\
+ft_strrchr.c ft_strchr.c ft_tolower.c ft_toupper.c ft_strnstr.c 
 
 OBJECTS = $(SOURCES:.c=.o)
 
