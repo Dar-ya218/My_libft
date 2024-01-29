@@ -6,14 +6,15 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:23:55 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/25 12:23:58 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:50:41 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-int my_isspace(int c) {
+int	my_isspace(int c)
+{
     if (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r') {
         return 1;
     } else {
