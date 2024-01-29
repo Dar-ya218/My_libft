@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:21:20 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/26 15:12:15 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/01/29 14:14:24 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
     if (result) {
         printf("Found '%c' at position: %ld\n", c, result - s);
     } else {
-        printf("Character '%c' not found within the first %ld characters.\n", c, n);
+        printf("Character '%c' not found within the first %ld"
+				"characters.\n", c, n);
     }
 
     return 0;
