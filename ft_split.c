@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:38:10 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/29 16:38:22 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/01 11:17:23 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static size_t	ft_word_len(char const *s, char c)
 	return (len);
 }
 
-static char		**ft_free(char **t, size_t i)
+static char	**ft_free(char **t, size_t i)
 {
 	while (i > 0)
 	{
@@ -57,7 +57,7 @@ static char		**ft_free(char **t, size_t i)
 	return (NULL);
 }
 
-char			**ft_split(char const *s, char c)
+char	*ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
