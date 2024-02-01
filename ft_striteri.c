@@ -11,6 +11,11 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
+
+/*This function takes a string s and a function f, and applies f to each     */
+/*character of s, passing the index of the character and a pointer to the    */
+/*character as arguments.                                                    */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
