@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:25:45 by dabochko          #+#    #+#             */
-/*   Updated: 2024/02/01 15:24:39 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:47:58 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@ char	*ft_strdup(const char *s1)
 {
 	size_t	size;
 	void	*ptr;
-	
+
 	size = ft_strlen(s1);
 	ptr = malloc(size + 1);
 	if (ptr == NULL)
-{
-	return (NULL);
-}
-ft_strlcpy(ptr, s1, (size + 1));
-return (ptr);
+	{
+		return (NULL);
+	}
+	ft_strlcpy(ptr, s1, (size + 1));
+	return (ptr);
 }
 /*
 int main()
