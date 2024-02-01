@@ -6,38 +6,33 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:25:45 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/26 15:16:47 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:24:39 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(const char *s1)
 {
-	size_t	s_size;
-	char	*dup;
-
-	s_size = ft_strlen(s);
-	dup = (char *)malloc(s_size + 1);
-	if (dup == NULL)
-	{
-		errno = ENOMEM;
-		return (NULL);
-	}
-	else
-		return ((char *)ft_memcpy(dup, s, s_size +1));
+	size_t	size;
+	void	*ptr;
+	
+	size = ft_strlen(s1);
+	ptr = malloc(size + 1);
+	if (ptr == NULL)
+{
+	return (NULL);
 }
-
-/*int main() {
-    const char *s = "Hello, World!";
-
-    char *result = ft_strdup(s);
-
-    printf("Original string: \"%s\"\n", s);
-    printf("Duplicated string: \"%s\"\n", result);
-
-    free(result);
-
-    return 0;
-}*/
+ft_strlcpy(ptr, s1, (size + 1));
+return (ptr);
+}
+/*
+int main()
+{
+	char *s1 = "Hello";
+	char *s2 = ft_strdup(s1);
+	printf("%s\n", s2);
+	return (0);
+}
+*/
