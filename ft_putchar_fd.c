@@ -11,3 +11,18 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <unistd.h>
+
+/*This function takes a character and a file descriptor, and writes the       */
+/*character to the given file descriptor.                                     */
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
+
+/*
+int main() {
+	ft_putchar_fd('a', 1);
+	return 0;
+}*/
