@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:39:33 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/29 16:39:39 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/02 12:21:10 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static size_t	ft_count_digits(int n)
 	return (count);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	size_t	n_len;
 	char	*t;
