@@ -14,9 +14,8 @@
 //#include <stdio.h>
 //#include <string.h>
 
-/*
-	This function copies n positions of memory.
-*/
+/* This function copies n positions of memory.*/
+
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t			i;
