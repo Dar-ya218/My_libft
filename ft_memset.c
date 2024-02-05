@@ -13,6 +13,9 @@
 #include "libft.h"
 //#include <stdio.h>
 
+/* Fills the first 'len' bytes of the memory area pointed to by 'b' with the */ 
+/* constant byte 'c'. It returns a pointer to the memory area 'b'.           */
+
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*memory_ptr;
