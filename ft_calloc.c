@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:24:47 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/25 12:24:51 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/06 12:58:35 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*result;
 
 	result = (void *)malloc(nmemb * size);
-	if (result == NULL)
-	{
-		errno = ENOMEM;
-		return ((void *)0);
-	}
-	else
-	{
-		ft_bzero(result, nmemb * size);
-		return (result);
-	}
+	if (!result)
+		return (NULL);
+	ft_bzero(result, nmemb * size);
+	return (result);
 }
 
 /*int main() {

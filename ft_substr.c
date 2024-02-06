@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:36:10 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/29 16:36:17 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/06 14:03:48 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,25 @@
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
 	char	*sub;
-	size_t	sub_len;
+	size_t	x;
 	size_t	str_len;
 
 	if (!str)
 		return (NULL);
-	sub_len = 0;
+	x = 0;
 	str_len = ft_strlen(str);
 	if (start < str_len)
 	{
 		if ((start + len) > str_len)
-			sub_len = str_len - start;
+			x = str_len - start;
 		else
-			sub_len = len;
+			x = len;
 	}
-	sub = (char *)malloc(sub_len + 1);
+	sub = (char *)malloc((x + 1) * sizeof(char));
 	if (sub == NULL)
 		return (NULL);
-	sub = (char *)ft_memcpy(sub, (str + start), sub_len);
-	*(sub + sub_len) = '\0';
+	sub = (char *)ft_memcpy(sub, (str + start), x);
+	*(sub + x) = '\0';
 	return (sub);
 }
 
