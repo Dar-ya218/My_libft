@@ -13,6 +13,9 @@
 #include "libft.h"
 //#include <stdio.h>
 
+/*It makes a copy of the string s1, does the function f on each character */
+/* of the string and returns the new string. */
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	s_len;
