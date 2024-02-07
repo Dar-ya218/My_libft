@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 11:40:36 by dabochko          #+#    #+#             */
-/*   Updated: 2024/02/02 11:59:43 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/07 13:49:46 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,13 @@ void	ft_putstr_fd(char *s, int fd)
 }
 
 /*
+#include <fcntl.h>
+
 int main() {
-	ft_putstr_fd("Hello, World!\n", 1);
+	int	fd;
+
+	fd = open("prueba", O_WRONLY);
+	ft_putstr_fd("Hello, World!\n", fd);
+	close(fd);
 	return 0;
 }*/

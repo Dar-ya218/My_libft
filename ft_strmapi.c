@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:40:12 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/29 16:40:16 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:53:18 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 /*
 char my_func(unsigned int i, char c) {
-    return c + i;
+    return c; //put characther
 }
 
 int main() {
-    const char *s = "Hello, World!";
+    const char *s = "helloworld";
 
     char *result = ft_strmapi(s, my_func);
 
