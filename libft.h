@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:12:21 by dabochko          #+#    #+#             */
-/*   Updated: 2024/02/07 15:37:28 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/08 15:23:01 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ char	*ft_substr(char const *str, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s, char const *set);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
 
 #endif

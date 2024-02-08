@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:38:10 by dabochko          #+#    #+#             */
-/*   Updated: 2024/02/01 11:17:23 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/08 15:28:37 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,12 @@ static size_t	ft_count_words(char const *s, char c)
 
 static size_t	ft_word_len(char const *s, char c)
 {
-	size_t	i;
 	size_t	len;
 
-	i = 0;
 	len = 0;
-	while (s[i] != c && s[i] != '\0')
+	while (s[len] != c && s[len] != '\0')
 	{
 		len++;
-		i++;
 	}
 	return (len);
 }
@@ -57,7 +54,7 @@ static char	**ft_free(char **t, size_t i)
 	return (NULL);
 }
 
-char	*ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -73,8 +70,7 @@ char	*ft_split(char const *s, char c)
 	j = 0;
 	while (i < ft_count_words(s, c))
 	{
-		while (s[j] == c)
-			j++;
+		while (s[j++] == c)
 		t[i] = (char *)malloc(sizeof(char) * (ft_word_len(&s[j], c) + 1));
 		if (!t[i])
 			return (ft_free(t, i));
