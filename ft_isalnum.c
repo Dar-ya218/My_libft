@@ -13,6 +13,8 @@
 #include "libft.h"
 // #include <stdio.h>
 
+/* To check whether the passed character is alphanumeric or not. */
+
 int	ft_isalnum(int c)
 {
 	if ((c >= 'A' && c <= 'Z')
