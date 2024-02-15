@@ -3,104 +3,113 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:38:10 by dabochko          #+#    #+#             */
-/*   Updated: 2024/02/08 15:28:37 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/14 14:25:50 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-static size_t	ft_count_words(char const *s, char c)
+static size_t	ft_countword(char const *s, char c)
 {
-	size_t	i;
 	size_t	count;
+	int		word;
 
-	i = 0;
 	count = 0;
-	if (s[i] != c && s[i] != '\0')
-		count++;
-	while (s[i] != '\0')
+	word = 0;
+	while (*s)
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
-			count++;
-		i++;
+		if (*s != c)
+		{
+			if (!word)
+			{
+				count++;
+				word = 1;
+			}
+		}
+		else
+		{
+			word = 0;
+		}
+		s++;
 	}
 	return (count);
 }
 
-static size_t	ft_word_len(char const *s, char c)
+static char	**ft_free(char **str)
 {
-	size_t	len;
+	int	i;
 
-	len = 0;
-	while (s[len] != c && s[len] != '\0')
+	i = 0;
+	while (str[i])
 	{
-		len++;
+		free(str[i]);
+		i++;
 	}
-	return (len);
+	free(str);
+	return (NULL);
 }
 
-static char	**ft_free(char **t, size_t i)
+static int	ft_word_length(char const *s, char c)
 {
-	while (i > 0)
-	{
-		i--;
-		free(t[i]);
-	}
-	free(t);
-	return (NULL);
+	size_t	word_len;
+
+	if (!ft_strchr(s, c))
+		word_len = ft_strlen(s);
+	else
+		word_len = ft_strchr(s, c) - s;
+	return (word_len);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	char	**t;
+	char	**pt_pt_char;
+	size_t	word_len;
+	int		i;
 
 	if (!s)
-		return (NULL);
-	t = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
-	if (!t)
-		return (NULL);
+		return (0);
+	pt_pt_char = (char **)malloc((ft_countword(s, c) + 1) * sizeof(char *));
+	if (!s || !pt_pt_char)
+		return (0);
 	i = 0;
-	j = 0;
-	while (i < ft_count_words(s, c))
+	while (*s)
 	{
-		while (s[j++] == c)
-		t[i] = (char *)malloc(sizeof(char) * (ft_word_len(&s[j], c) + 1));
-		if (!t[i])
-			return (ft_free(t, i));
-		k = 0;
-		while (s[j] != c && s[j] != '\0')
-			t[i][k++] = s[j++];
-		t[i++][k] = '\0';
+		while (*s == c && *s)
+			s++;
+		if (*s)
+		{
+			word_len = ft_word_length(s, c);
+			pt_pt_char[i++] = ft_substr(s, 0, word_len);
+			if (pt_pt_char[i - 1] == NULL)
+				return (ft_free(pt_pt_char));
+			s += word_len;
+		}
 	}
-	t[i] = NULL;
-	return (t);
+	pt_pt_char[i] = NULL;
+	return (pt_pt_char);
 }
 
-/*int main() {
-	const char *s = "Hello, World!";
-	char c = ' ';
-
-	char **result = ft_split(s, c);
-
-	if (result) {
-		printf("String: \"%s\"\n", s);
-		printf("Split by: '%c'\n", c);
-		printf("Result:\n");
-		for (int i = 0; result[i] != NULL; i++) {
-			printf("  \"%s\"\n", result[i]);
-			free(result[i]);  // Don't forget to free the memory!
-		}
-		free(result);
-	} else {
-		printf("Failed to allocate memory.\n");
-	}
-
-	return 0;
-}*/
+/* ************************************************************************** */
+/* DESCRIPTION:                                                               */
+/*                                                                            */
+/* Splits the string 's' using the delimiter 'c' and returns an array of      */
+/* strings representing the words in 's'. Each word is allocated its own      */
+/* memory block. If memory allocation fails, it frees the previously          */
+/* allocated memory and returns NULL.                                         */
+/*                                                                            */
+/* INPUT:                                                                     */
+/* - The string (s) to be split.                                              */
+/* - The delimiter (c) used to identify word boundaries.                      */
+/*                                                                            */
+/* OUTPUT:                                                                    */
+/* - A pointer to an array of strings (char **) representing the split words. */
+/* - Returns NULL if memory allocation fails or if 's' is NULL.               */
+/*                                                                            */
+/* NOTE:                                                                      */
+/* - The returned array of strings is terminated by a NULL pointer.           */
+/* - The caller is responsible for freeing the allocated memory.              */
+/* ************************************************************************** */

@@ -6,15 +6,15 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:23:05 by dabochko          #+#    #+#             */
-/*   Updated: 2024/01/19 14:22:52 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:41:33 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-/* Fills the first 'len' bytes of the memory area pointed to by 'b' with the */ 
-/* constant byte 'c'. It returns a pointer to the memory area 'b'.           */
+/* Fills the first 'len' bytes of the memory area pointed to by 'b' with the
+ constant byte 'c'. It returns a pointer to the memory area 'b'.           */
 
 void	*ft_memset(void *b, int c, size_t len)
 {
